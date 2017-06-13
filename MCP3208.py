@@ -2,7 +2,7 @@ Adafruit_GPIO.SPI as SPI
 
 class MCP3208(object):
 	def __init__(self):
-		self.spi = SPI.SpiDev('/dev/spidev1.0', 0, 1000000)
+		self.spi = SPI.SpiDev(0, 0, max_speed_hz=1000000)
 		self.spi.set_mode(0)
 		self.spi.set_bit_order(SPI.MSBFIRST)
 		
