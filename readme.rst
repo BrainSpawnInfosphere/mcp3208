@@ -1,4 +1,4 @@
-.. figure:: docs/pics/chip.png
+.. figure:: https://raw.githubusercontent.com/MomsFriendlyRobotCompany/MCP3208/master/docs/pics/chip.png
     :width: 300px
 
 MCP3208
@@ -22,7 +22,7 @@ This is a python library designed to work with the MCP3208 ADC using SPI on a Ra
     - 400 μA max. active current at 5V
 - Industrial temp range: -40°C to +85°C
 
-For more information, see the `datasheet <docs/mcp3208.pdf>`_.
+For more information, see the `datasheet <https://raw.githubusercontent.com/MomsFriendlyRobotCompany/MCP3208/master/docs/mcp3208.pdf>`_.
 
 Install
 --------
@@ -38,9 +38,9 @@ Usage
 
 	from mcp3208 import MCP3208
 	import time
-	
+
 	adc = MCP3208()
-	
+
 	while True:
 		for i in range(8):
 			print('ADC[{}]: {:.2f}'.format(i, adc.read(i)))
@@ -53,7 +53,7 @@ This chip uses SPI to interface with the Raspberry Pi. Basically, the chip
 returns 12 bits contained in 3 bytes. You are able to read the MCP3208
 either LSB or MSB first.
 
-.. figure:: docs/pics/waveform.png
+.. figure:: https://raw.githubusercontent.com/MomsFriendlyRobotCompany/MCP3208/master/docs/pics/waveform.png
 
 MIT License
 --------------
