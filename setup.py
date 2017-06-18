@@ -45,5 +45,7 @@ setup(
 		'publish': PublishCommand,
 		'make': BuildCommand
 	},
-	scripts=[]
+	scripts=[
+		'bin/mcp3208.py'
+	]
 )
