@@ -19,8 +19,8 @@ class MCP3208(object):
 		self.spi.close()
 
 	def read(self, ch):
-		if 0 <= ch <= 7:
-			raise Exception('MCP3208 channel must be 0-7: ' + ch)
+		if 7 <= ch <= 0:
+			raise Exception('MCP3208 channel must be 0-7: ' + str(ch))
 
 		cmd = 128  # 1000 0000
 		cmd += 64  # 1100 0000

@@ -46,6 +46,6 @@ setup(
 		'make': BuildCommand
 	},
 	scripts=[
-		'bin/mcp3208.py'
+		'bin/adc3208.py'
 	]
 )

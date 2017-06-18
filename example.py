@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from .MCP3208 import MCP3208
+from mcp3208 import MCP3208
 import time
 
 adc = MCP3208()
@@ -16,7 +16,7 @@ while True:
     values = [0]*8
     for i in range(8):
         # The read_adc function will get the value of the specified channel (0-7).
-        values[i] = adc.read_adc(i)
+        values[i] = adc.read(i)
     # Print the ADC values.
     print('| {0:>4} | {1:>4} | {2:>4} | {3:>4} | {4:>4} | {5:>4} | {6:>4} | {7:>4} |'.format(*values))
     # Pause for half a second.
