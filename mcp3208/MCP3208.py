@@ -1,12 +1,20 @@
+import platform
+import os
+
+# ok, I don't want this to work in travis.ci env or on anything other than linux
 try:
+	if 'CI' in os.environ or platform.system() != 'Linux':
+		raise ImportError()
 	import Adafruit_GPIO.SPI as SPI
 except ImportError:
 	class SPI(object):
 		MSBFIRST = 1
-		def SpiDev(a, b, max_speed_hz): pass
-		def transfer(a): pass
-		def set_mode(a): pass
-		def set_bit_order(a): pass
+		class SpiDev(object):
+			def __init__(self, a, b, max_speed_hz): pass
+			def transfer(self, a): return [0x7f]*len(a)
+			def set_mode(self, a): pass
+			def set_bit_order(self, a): pass
+			def close(self): pass
 
 
 class MCP3208(object):
