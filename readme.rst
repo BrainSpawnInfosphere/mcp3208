@@ -4,6 +4,15 @@
 MCP3208
 =============
 
+.. image:: https://img.shields.io/pypi/l/mcp3208.svg
+	:target: https://github.com/MomsFriendlyRobotCompany/mcp3208
+.. image:: https://img.shields.io/pypi/pyversions/mcp3208.svg
+	:target: https://github.com/MomsFriendlyRobotCompany/mcp3208
+.. image:: https://img.shields.io/pypi/wheel/mcp3208.svg
+	:target: https://github.com/MomsFriendlyRobotCompany/mcp3208
+.. image:: https://img.shields.io/pypi/v/mcp3208.svg
+	:target: https://github.com/MomsFriendlyRobotCompany/mcp3208
+
 This is a python library designed to work with the MCP3208 ADC using SPI on a Raspberry Pi. The MCP3208 is capable of:
 
 - 12-bit resolution
